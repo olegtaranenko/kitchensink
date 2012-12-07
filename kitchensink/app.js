@@ -1,6 +1,11 @@
 //<debug>
-Ext.Loader.setPath({
-    'Ext': '../touch/src'
+Ext.Loader.setConfig({
+	enabled: true,
+	disableCaching: !/[?&](cache|breakpoint|debug)/i.test(location.search),
+	paths: {
+		'Ext': '../touch/src',
+		'Ext.ux': 'app/ux'
+	}
 });
 //</debug>
 
